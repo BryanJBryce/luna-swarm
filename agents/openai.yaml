@@ -1,0 +1,7 @@
+interface:
+  display_name: "Luna Swarm"
+  short_description: "Coordinate bounded work across Luna agents"
+  default_prompt: "Use $luna-swarm to divide this task among bounded Luna workers, then synthesize and verify their results."
+
+policy:
+  allow_implicit_invocation: false
