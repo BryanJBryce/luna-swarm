@@ -1,11 +1,11 @@
 # Luna Swarm
 
-A Codex skill for coordinating bounded parallel work with GPT-5.6 Luna agents. The primary agent plans the assignments, keeps workers within scope, integrates their findings, and verifies the result.
+A Codex skill for coordinating bounded parallel work with GPT-6 Luna agents. The primary agent plans the assignments, keeps workers within scope, integrates their findings, and verifies the result.
 
 ## Requirements
 
 - Codex with skills and multi-agent tools available.
-- Access to the `gpt-5.6-luna` model for spawned agents.
+- Access to the `gpt-6-luna` model for spawned agents.
 - A task with independent work that benefits from parallel execution.
 
 If the runtime cannot select or verify Luna agents, the skill reports that limitation rather than silently using a different model.
@@ -29,7 +29,7 @@ No configuration change is required when multi-agent tools are enabled and the r
 [agents]
 enabled = true
 max_concurrent_threads_per_session = 10
-default_subagent_model = "gpt-5.6-luna"
+default_subagent_model = "gpt-6-luna"
 default_subagent_reasoning_effort = "medium"
 ```
 

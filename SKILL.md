@@ -1,11 +1,11 @@
 ---
 name: luna-swarm
-description: Coordinate bounded parallel work with GPT-5.6 Luna agents under a primary coordinator. Use when the user explicitly invokes $luna-swarm or asks for a Luna swarm, broad parallel exploration, independent reviews, test or log analysis, research fan-out, or implementation split across independent areas. Do not trigger for ordinary tasks that do not request delegation.
+description: Coordinate bounded parallel work with GPT-6 Luna agents under a primary coordinator. Use when the user explicitly invokes $luna-swarm or asks for a Luna swarm, broad parallel exploration, independent reviews, test or log analysis, research fan-out, or implementation split across independent areas. Do not trigger for ordinary tasks that do not request delegation.
 ---
 
 # Luna Swarm
 
-Coordinate parallel work with GPT-5.6 Luna subagents. The primary agent owns scope,
+Coordinate parallel work with GPT-6 Luna subagents. The primary agent owns scope,
 decomposition, integration, decisions, and final verification.
 
 ## Preserve authority
@@ -26,10 +26,10 @@ decomposition, integration, decisions, and final verification.
 
 ## Select the worker model
 
-- Select `gpt-5.6-luna` explicitly for each worker when the spawn interface supports model selection.
+- Select `gpt-6-luna` explicitly for each worker when the spawn interface supports model selection.
 - Use `medium` reasoning by default, unless the user asks for a different effort.
 - Start workers with fresh context when the runtime supports it.
-- If explicit model selection is unavailable, rely on a default only when the active Codex configuration confirms that spawned agents use `gpt-5.6-luna`.
+- If explicit model selection is unavailable, rely on a default only when the active Codex configuration confirms that spawned agents use `gpt-6-luna`.
 - Treat an accepted spawn selection or persisted session metadata as evidence of the worker model. Do not rely on a worker's textual self-identification.
 - Do not silently substitute another model. Explain the limitation if Luna cannot be selected or verified.
 - Do not patch or replace the runtime's model catalog. If the runtime cannot start Luna agents, report the blocker.
